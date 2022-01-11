@@ -29,7 +29,7 @@
       <section class="posts">
         <article class="post active" id="article-1" data-tags="design tutorial" data-author="Marion Berry">
           <h3 class="post-title">Article 1</h3>
-          <p class="post-author"></p>
+            <p class="post-author"></p>
           <div class="post-content">
             <p>Duis non dolor efficitur erat interdum fringilla a lobortis dolor. Aenean in massa viverra, pretium augue et, imperdiet diam. Proin varius vitae lectus ut suscipit. Etiam metus lacus, molestie at ante eget, gravida tristique metus. Morbi finibus elit mi, ut aliquam libero tempor eu.</p>
             
@@ -198,6 +198,27 @@
     </main>
   </div>
 </div>
+<script id="template-author-list" type="text/x-handlebars-template">
+  <li><a href="#author-{{ id }}"><span>{{ title }}</span></a>({{ articleNumber }})</li>
+</script>
+<script id="template-tag-cloud-link" type="text/x-handlebars-template">
+  {{#each tags}}
+  <li><a class="{{ className }}" href="#tag-{{ tag }}">{{ tag }}</a> ({{ count }})</li>
+  {{/each}}
+</script>
+<script id="template-tag-link" type="text/x-handlebars-template">
+  <li><a href="#tag-{{ id }}"><span>{{ title }}</span></a></li>
+</script>
+<script id="template-author-link" type="text/x-handlebars-template">
+  <a href="#author-{{ id }}"><span>{{ title }}</span></a>
+</script>
+<script id="template-tag-link" type="text/x-handlebars-template">
+  <li><a href="#tag-{{ id }}"><span>{{ title }}</span></a></li>
+</script>
+<script id="template-article-link" type="text/x-handlebars-template">
+  <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
